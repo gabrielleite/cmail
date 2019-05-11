@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
         'menu.component.css'
     ]
 })
-export class MenuComponent {}
+export class MenuComponent {
+
+    private _isMenuOpen = false;
+
+    toggle() {
+        this._isMenuOpen = !this._isMenuOpen;
+    }
+
+    get isMenuOpen() {
+        return this._isMenuOpen;
+    }
+ }
