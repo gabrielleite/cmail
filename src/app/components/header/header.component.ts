@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
     selector: 'cmail-header',
     templateUrl: './header.component.html',
     styleUrls: [
-        './header.component.css',
-        './header-search.css'
+        './header.component.css'
     ]
 })
 export class HeaderComponent {}
