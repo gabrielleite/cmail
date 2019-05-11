@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { InputSearchComponent } from './components/input-search/input-search.component';
+import { EmailFormComponent } from './components/email-form/email-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MenuComponent,
-    InputSearchComponent
+    InputSearchComponent,
+    EmailFormComponent
   ],
   imports: [
     BrowserModule
