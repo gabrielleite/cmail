@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'cmail-email-form',
@@ -21,14 +22,16 @@ export class EmailFormComponent {
         this._isEmailFormOpen = !this._isEmailFormOpen;
     }
 
-    handleSubmit(event: Event) {
-        event.preventDefault();
+    handleSubmit(formEmail: NgForm) {
+        if (formEmail.invalid) return;
+        
         this.sendEmail.emit({ newEmail: this._email });
         this._email = {
             destinatario: '',
             assunto: '',
             conteudo: ''
         };
+        formEmail.reset();
     }
 
     get isEmailFormOpen() {
