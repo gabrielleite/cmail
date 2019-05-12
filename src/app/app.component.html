@@ -4,13 +4,7 @@
         <div class="page-content">
 
             <div class="mdl-grid">
-                <!-- Floating Multiline Textfield -->
-                <button class="globalFab tooltip btn mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
-                    role="tooltip" aria-label="Criar novo email"
-                    (click)="emailForm.toggle()">
-
-                    <span class="material-icons">add</span>
-                </button>
+                <cmail-fab (click)="emailForm.toggle()"></cmail-fab>
 
                 <cmail-email-form #emailForm></cmail-email-form>
             </div>
