@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { ModuloRoteamento } from './app.routes';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -29,7 +29,7 @@ import { CadastroComponent } from './modules/cadastro/cadastro.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ModuloRoteamento
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
