@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
   ]
 })
 export class AppComponent {
+  private _emailList = [];
+
+  handleNewEmail(event) {
+    const newEmail = event.newEmail;
+    this._emailList.push(newEmail);
+  }
+
+  get emailList() {
+    return this._emailList;
+  }
 }

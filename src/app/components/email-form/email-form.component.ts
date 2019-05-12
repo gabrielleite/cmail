@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'cmail-email-form',
@@ -8,13 +8,34 @@ import { Component } from '@angular/core';
     ]
 })
 export class EmailFormComponent {
+    @Output() sendEmail = new EventEmitter();
+
     private _isEmailFormOpen = false;
+    private _email = {
+        destinatario: '',
+        assunto: '',
+        conteudo: ''
+    };
 
     toggle() {
         this._isEmailFormOpen = !this._isEmailFormOpen;
     }
 
+    handleSubmit(event: Event) {
+        event.preventDefault();
+        this.sendEmail.emit({ newEmail: this._email });
+        this._email = {
+            destinatario: '',
+            assunto: '',
+            conteudo: ''
+        };
+    }
+
     get isEmailFormOpen() {
         return this._isEmailFormOpen;
+    }
+
+    get email() {
+        return this._email;
     }
 }
