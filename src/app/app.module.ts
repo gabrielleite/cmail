@@ -10,6 +10,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { InputSearchComponent } from './components/input-search/input-search.component';
 import { EmailFormComponent } from './components/email-form/email-form.component';
 import { FloatingActionButtonComponent } from './components/floating-action-button/floating-action-button.component';
+import { FormGroupComponent } from './components/form-group/form-group.component';
+import { FormFieldDirective } from './components/form-group/form-field.directive';
 import { CaixaDeEntradaComponent } from './modules/caixa-de-entrada/caixa-de-entrada.component';
 import { LoginComponent } from './modules/login/login.component';
 import { CadastroComponent } from './modules/cadastro/cadastro.component';
@@ -22,6 +24,8 @@ import { CadastroComponent } from './modules/cadastro/cadastro.component';
     InputSearchComponent,
     EmailFormComponent,
     FloatingActionButtonComponent,
+    FormGroupComponent,
+    FormFieldDirective,
     CaixaDeEntradaComponent,
     LoginComponent,
     CadastroComponent
